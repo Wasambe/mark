@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-3.3.1.js"></script>
+
+<script>
+//var will go here
+var results = "";
+</script>
+
+</head>
+
+
+<body>
+
+<p id="demo1">demo1</p>
+<br>
+
+<p id="demo2">demo2</p>
+<br>
+<p id="demo">demo</p>
+
+<p id="blogtoweb">Blog to Web</p>
+
+
+
+<script>
+//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html
+
+
+whateverorigin(); //I think it's working even on repeated runs.
+
+
+function whateverorigin(){
+//Use It
+//Usage is similar to anyorigin. For example, to fetch the data from http://google.com with jQuery, use this snippet:
+
+//$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://google.com') + '&callback=?', function(data){
+//alert(data.contents);
+
+// this works $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/testnewpageedithtml.html') + '&callback=?', function(data){
+	//alert(data.contents);
+$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('//https://wasambetestshare.blogspot.com/p/blog-to-web-1.html') + '&callback=?', function(data){
+	results = (data.contents);
+	whateverorigin1(); //Searches and Parses ---results--- do final text for display
+
+	});
+	
+	/*
+	console.log(data.contents);
+	results = (data.contents);
+	var demovar = document.getElementById("demo");
+	demovar.innerHTML = "Paragraph changed!";
+	//var demo1var = document.getElementById("demo1");
+	//demo1var.innerHTML = results;
+	*/
+	}	
+  
+
+
+
+function whateverorigin1() {
+
+
+//alert (results);
+ // var str = "Visit W3Schools!"; 
+ console.log (results);
+  var str = (results); 
+ // var n = str.search("W3Schools");
+ var n1 = str.search("<div class='post-body entry-content float-container' id='post-body");
+ n1 = n1 + 88;
+  var n2 = str.search("<div class='post-sidebar invisible'>");
+  var demo1var = document.getElementById ("demo1");
+  var demo2var = document.getElementById ("demo2");
+   document.getElementById("demo1").innerHTML = n1;
+   document.getElementById("demo2").innerHTML = n2;
+   var res = str.substring(n1, n2);
+    console.log (res);
+	//document.getElementById("demo").innerHTML = res;
+	 document.getElementById("blogtoweb").innerHTML = res;
+} 
+
+</script>
+
+</body>
+
+

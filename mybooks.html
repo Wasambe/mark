@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mybooks.html</title>
+
+<!--<link rel = "stylesheet" type = "text/css" href = "main.css" />-->
+
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baskervville">
+
+
+
+<style>
+* {box-sizing: border-box}
+
+/* div for holding Mark's name */
+.divnamewrapper{
+ text-align: center;
+  font-family: 'Tangerine', serif;
+        font-size: 32px;
+		}
+
+.divname{
+ font-family: 'Tangerine', serif;
+        font-size: 32px;
+		width: 100%;
+		margin: auto;
+		text-align: center;
+}
+	
+
+/* Nav Menu */
+.navbarwrapper{
+width: 40%;
+margin: auto;
+}
+
+.navbar {
+  width: 100%;
+  background-color: white;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: black;
+  text-decoration: none;
+    width: 25%; /* Four links of equal widths */
+  text-align: center;
+    padding: 14px 16px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.navbar a:hover {
+  background-color: none;
+}
+
+.navbar a.active {
+  background-color: none;
+}
+
+/* Makes Nav Menu Items vertical and centered on mobile device */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+/* Create two equal columns that floats next to each other */
+.columnintro {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  }
+  
+  
+  /* p for Mark's Bio Intro */
+.pintro{
+ text-align: left;
+  font-family: 'Baskervville', serif;
+        font-size: 24px;
+		}
+  
+  
+/* Center imgage inside its column*/
+.imgintro {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
+
+/* Style "BOOKS" */
+.rowbooksheader{
+text-align: center;
+font-size: 27px;
+}
+
+
+/* Style Row of Book Covers   */
+/* Create three equal columns that floats next to each other */
+.columnbookcovers {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  }
+  
+  
+/* Center imgage inside its column*/
+.imgbookcovers {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.rowbookcovers:after {
+  content: "";
+  display: table;
+  clear: both;
+ }
+
+/* Responsive layout - makes the two columns stack on top of each 
+other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columnbookcovers {
+    width: 100%;
+  }
+}
+
+
+
+
+/* Contact ME */
+.divcontactme{
+ text-align: center;
+  font-family: 'Tangerine', serif;
+        font-size: 32px;
+		}
+
+/* FOOTER */
+.divfooter{
+ text-align: center;
+  font-family: 'Tangerine', serif;
+        font-size: 32px;
+		}
+
+
+
+</style>
+</header>
+
+<body>
+
+
+<div class="divnamewrapper">
+ <p>Mark W. Aycox</p>
+ </div>
+
+
+<div class="navbarwrapper">
+<div class="navbar">
+  <a href="index.html" class="active">Home</a>
+  <a href="mybio.html">My Bio</a>
+  <a href="mybooks.html">My Books</a>
+   <a href="https://markwaycoxauthor.blogspot.com/">My Blog</a>
+</div>
+</div>
+
+
+<br>
+
+  <img src="images/penmark3.jpg" alt="no photo available" style="width:100%">
+
+<br>
+
+<div class="rowbooksheader">
+<h3>MY BOOKS</h3>
+</div>
+
+<br>
+
+<div class="rowbookcovers">
+   <div class="columnbookcovers" style="background-color:#ffffff;">
+   <img src="images/onestone.jpg" alt="onestone.jpg" class="imgbookcovers">
+  </div>
+   <div class="columnbookcovers" style="background-color:#ffffff;">
+    <img src="images/onestonebackcover.jpg" alt="onemorerep.jpg" class="imgbookcovers">
+  </div>
+ </div>
+
+
+
+
+
+<br>
+<div class="divcontactme">
+ <h1 class="contactmeform"><a class="clickhref" href="https://markwaycoxauthorcontactme.blogspot.com/">Contact Me</a></h1>
+</div>
+
+<br>
+
+
+<div class="divfooter">
+ <p>Footer will go here</p>
+ </div>
+
+
+
+</body>
+</html> 

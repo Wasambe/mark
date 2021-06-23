@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="jquery-3.3.1.js"></script>
+<script type="text/javascript"></script>
+
+
+</head>
+<body>
+
+<iframe src="https://wasambetestshare.blogspot.com/p/blog-to-web-1.html" width="400" height="400"></ifr
+
+<p id='p1'></p>
+<p id='p2'></>
+
+
+<script>
+
+var p1content = 'This is contents of p1';
+var itm = document.getElementById("p1");
+itm.innerHTML=(p1content);
+// Get the last <li> element ("Milk") of <ul> with id="myList2"
+//var itm = document.getElementById("myList2").lastChild;
+var itm = document.getElementById("p1");
+
+
+// Copy the <li> element and its child nodes
+var cln = itm.cloneNode(true);
+
+// Append the cloned <li> element to <ul> with id="myList1"
+//document.getElementById("myList1").appendChild(cln);
+document.getElementById("p2").appendChild(cln);
+</script>
+
+
+
+<!--Works <div w3-include-html="content.html"></div>-->
+<div w3-include-html="http://www.play-hookey.com/htmltest/">
+
+<!--
+Add the JavaScript
+HTML includes are done by JavaScript.
+
+Example
+-->
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+</script>
+
+<!--
+Call includeHTML() at the bottom of the page:
+
+Example
+-->
+
+<script>
+includeHTML();
+</script>
+
+
+
+</body>
+</html>
